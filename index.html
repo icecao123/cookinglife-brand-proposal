@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cookinglife — Banner & Social Design Proposal</title>
+<meta name="description" content="A design proposal for Cookinglife: multilingual web banners and social media content following the Cookinglife brand guide. Concept demonstration — not affiliated with Cookinglife.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23DC054F'/%3E%3Ctext x='16' y='23' font-family='Arial' font-size='19' font-weight='800' fill='white' text-anchor='middle'%3Ec%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://miaoda.feishu.cn">
+<link href="https://miaoda.feishu.cn/fonts/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --magenta:#DC054F;
+  --aubergine:#7C2852;
+  --navy:#3C4F5C;
+  --pink:#F8C8C8;
+  --pink-light:#FDEDED;
+  --lilac:#F3E9EC;
+  --green:#D6E9D8;
+  --blue:#D3DCEA;
+  --orange:#FCDAAA;
+  --cream:#FCF6F1;
+  --ink:#3C4F5C;
+  --muted:#6B7A86;
+  --serif:'Poppins',-apple-system,'Segoe UI','Helvetica Neue','PingFang SC','Microsoft YaHei',sans-serif;
+  --sans:'Poppins',-apple-system,'Segoe UI','Helvetica Neue','PingFang SC','Microsoft YaHei',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-weight:400;line-height:1.7;-webkit-font-smoothing:antialiased}
+::selection{background:var(--magenta);color:#fff}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--magenta);font-weight:700}
+h1,h2,h3{font-family:var(--serif);font-weight:800;line-height:1.15;letter-spacing:-.01em}
+
+/* cut-corner shape (brand language) */
+.cut{clip-path:polygon(0 0, calc(100% - 26px) 0, 100% 26px, 100% 100%, 26px 100%, 0 calc(100% - 26px))}
+.cut-tr{clip-path:polygon(0 0, calc(100% - 26px) 0, 100% 26px, 100% 100%, 0 100%)}
+.logo-cut{clip-path:polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 0 100%)}
+
+/* ===== Header ===== */
+header{position:sticky;top:0;z-index:50;background:rgba(252,246,241,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(124,40,82,.14)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+.brand{display:flex;align-items:center;gap:0}
+.logo-chip{background:var(--magenta);color:#fff;padding:7px 16px 7px 14px;font-family:var(--serif);font-weight:800;font-size:17px;letter-spacing:-.01em}
+.brand-name{font-family:var(--serif);font-weight:800;font-size:18px;color:var(--ink);padding-left:10px}
+.brand-name b{color:var(--magenta);font-weight:800}
+.nav-links{display:flex;align-items:center;gap:26px;list-style:none}
+.nav-links a{font-size:13.5px;letter-spacing:.03em;color:var(--muted);font-weight:500;transition:color .25s}
+.nav-links a:hover{color:var(--magenta)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:10px;font-size:14px;font-weight:600;letter-spacing:.02em;transition:all .25s;cursor:pointer;border:1px solid transparent}
+.btn svg{width:14px;height:14px;transition:transform .25s}
+.btn:hover svg{transform:translateX(3px)}
+.btn-magenta{background:var(--magenta);color:#fff}
+.btn-magenta:hover{background:#B90440}
+.btn-ghost{border-color:rgba(124,40,82,.3);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--magenta);color:var(--magenta)}
+.menu-btn{display:none;background:none;border:1px solid rgba(124,40,82,.25);border-radius:8px;color:var(--ink);width:42px;height:42px;align-items:center;justify-content:center;cursor:pointer}
+.menu-btn svg{width:20px;height:20px}
+
+/* ===== Hero ===== */
+.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#FDEDED 0%,#FCF6F1 60%)}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding:88px 0 84px}
+.hero-copy .payoff{font-family:var(--serif);font-weight:800;color:var(--magenta);font-size:20px;line-height:1.2;margin-top:18px}
+.hero-copy .payoff small{display:block;font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--aubergine);margin-top:6px}
+.hero h1{font-size:clamp(36px,4.8vw,56px);margin-top:16px}
+.hero h1 em{font-style:normal;color:var(--magenta)}
+.hero-sub{margin:20px 0 32px;font-size:16px;color:var(--muted);max-width:52ch}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px}
+.hero-proof{display:flex;flex-wrap:wrap;gap:22px 36px;margin-top:48px;padding-top:28px;border-top:1px solid rgba(124,40,82,.16)}
+.proof{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:10px;font-weight:500}
+.proof b{color:var(--aubergine);font-weight:700;font-size:14px}
+.hero-media{position:relative}
+.hero-media .frame{border-radius:20px;overflow:hidden;box-shadow:0 34px 70px rgba(124,40,82,.22)}
+.hero-media img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.hero-tag{position:absolute;left:-16px;bottom:22px;background:var(--magenta);color:#fff;border-radius:12px;padding:12px 18px;font-size:12.5px;font-weight:600;letter-spacing:.04em;box-shadow:0 16px 34px rgba(220,5,79,.3)}
+.hero-tag b{display:block;font-size:15px;font-weight:800}
+
+/* ===== Sections ===== */
+section{padding:88px 0}
+.sec-head{max-width:680px;margin-bottom:48px}
+.sec-head h2{font-size:clamp(28px,3.4vw,40px);margin-top:12px}
+.sec-head p{margin-top:14px;color:var(--muted);font-size:15.5px}
+.alt{background:#FDEDED}
+.lang-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.lang-chip{font-size:11px;font-weight:700;letter-spacing:.12em;border:1px solid rgba(220,5,79,.35);color:var(--magenta);padding:4px 10px;border-radius:6px}
+
+/* ===== Banners ===== */
+.banner-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+.banner-card{border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 18px 40px rgba(124,40,82,.12);transition:transform .3s,box-shadow .3s}
+.banner-card:hover{transform:translateY(-5px);box-shadow:0 26px 52px rgba(124,40,82,.18)}
+.banner-stage{position:relative;background:#F3E9EC;display:flex;align-items:center;justify-content:center;padding:34px 20px}
+.banner-note{padding:14px 20px;border-top:1px solid rgba(124,40,82,.12);display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.banner-note .dim{font-size:12px;color:var(--muted)}
+.banner-note b{font-size:12.5px;color:var(--aubergine)}
+
+/* banner 250x250 */
+.b250{width:250px;height:250px;position:relative;overflow:hidden;border-radius:8px;box-shadow:0 10px 24px rgba(124,40,82,.2)}
+.b250 .bimg{position:absolute;inset:0}
+.b250 .bimg img{width:100%;height:100%;object-fit:cover}
+.b250 .btop{position:absolute;top:14px;left:14px;right:14px;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.25);z-index:2}
+.b250 .btop .merk{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:.95}
+.b250 .btop .prod{font-size:19px;font-weight:800;line-height:1.15;margin-top:2px}
+.b250 .bprice{position:absolute;left:14px;bottom:44px;color:#fff;z-index:2}
+.b250 .bprice .was{font-size:12px;text-decoration:line-through;opacity:.85}
+.b250 .bprice .now{font-size:24px;font-weight:800;line-height:1}
+.b250 .bprice .lbl{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.9}
+.b250 .blogo{position:absolute;right:14px;bottom:12px;z-index:2}
+.b250 .blogo span{display:inline-block;background:var(--magenta);color:#fff;font-size:11px;font-weight:800;padding:3px 9px;border-radius:4px;letter-spacing:.02em}
+.b250 .bgrad{position:absolute;inset:0;background:linear-gradient(180deg,rgba(124,40,82,0) 40%,rgba(124,40,82,.62));z-index:1}
+
+/* banner 728x90 */
+.b728{width:100%;max-width:728px;height:90px;position:relative;overflow:hidden;border-radius:8px;box-shadow:0 10px 24px rgba(124,40,82,.2);display:flex;align-items:center}
+.b728 .bbg{position:absolute;inset:0;background:linear-gradient(90deg,var(--magenta) 0%,#B90440 100%)}
+.b728 .bimg{position:absolute;right:0;top:0;bottom:0;width:38%}
+.b728 .bimg img{width:100%;height:100%;object-fit:cover}
+.b728 .bimg::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--magenta),transparent 55%);z-index:1}
+.b728 .btext{position:relative;z-index:2;padding:0 24px;color:#fff}
+.b728 .merk{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;opacity:.9}
+.b728 .prod{font-size:19px;font-weight:800;line-height:1.2}
+.b728 .price{display:flex;align-items:baseline;gap:10px;margin-top:3px}
+.b728 .was{font-size:12px;text-decoration:line-through;opacity:.8}
+.b728 .now{font-size:21px;font-weight:800}
+.b728 .lbl{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.9}
+.b728 .blogo{position:absolute;right:12px;bottom:8px;z-index:2;background:rgba(124,40,82,.55);color:#fff;font-size:10.5px;font-weight:800;padding:3px 9px;border-radius:4px;backdrop-filter:blur(3px)}
+
+/* banner 120x600 */
+.b120{width:120px;height:600px;position:relative;overflow:hidden;border-radius:8px;box-shadow:0 10px 24px rgba(124,40,82,.2)}
+.b120 .bimg{position:absolute;inset:0}
+.b120 .bimg img{width:100%;height:100%;object-fit:cover}
+.b120 .bgrad{position:absolute;inset:0;background:linear-gradient(180deg,rgba(124,40,82,0) 30%,rgba(124,40,82,.7));z-index:1}
+.b120 .btext{position:absolute;left:12px;right:12px;bottom:44px;color:#fff;z-index:2}
+.b120 .merk{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:.95}
+.b120 .prod{font-size:16px;font-weight:800;line-height:1.2;margin-top:2px}
+.b120 .was{font-size:11px;text-decoration:line-through;opacity:.85;margin-top:8px}
+.b120 .now{font-size:21px;font-weight:800;line-height:1}
+.b120 .lbl{font-size:9.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.9}
+.b120 .blogo{position:absolute;left:12px;bottom:12px;z-index:2;background:var(--magenta);color:#fff;font-size:10px;font-weight:800;padding:3px 8px;border-radius:4px}
+
+.banner-payoff{background:#7C2852;color:#fff;border-radius:16px;padding:34px 38px;margin-top:30px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;box-shadow:0 22px 48px rgba(124,40,82,.25)}
+.banner-payoff .p1{font-family:var(--serif);font-weight:800;font-size:clamp(24px,3vw,34px);line-height:1.25}
+.banner-payoff .p2{font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#F8C8C8;margin-top:6px}
+.banner-payoff .tags{display:flex;flex-wrap:wrap;gap:8px}
+.banner-payoff .tags span{font-size:11px;font-weight:700;background:rgba(248,200,200,.18);border:1px solid rgba(248,200,200,.4);padding:5px 12px;border-radius:6px}
+
+/* ===== Social ===== */
+.social-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.post{border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 18px 40px rgba(124,40,82,.12);transition:transform .3s,box-shadow .3s}
+.post:hover{transform:translateY(-5px);box-shadow:0 26px 52px rgba(124,40,82,.18)}
+.post-img{position:relative;aspect-ratio:1/1;overflow:hidden}
+.post-img img{width:100%;height:100%;object-fit:cover}
+.post-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(124,40,82,0) 45%,rgba(124,40,82,.55))}
+.post-copy{position:absolute;left:18px;right:18px;bottom:16px;color:#fff;z-index:2}
+.post-copy b{display:block;font-family:var(--serif);font-weight:800;font-size:19px;line-height:1.25}
+.post-copy span{font-size:11.5px;font-weight:600;opacity:.95}
+.post-meta{padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.post-meta .dim{font-size:12px;color:var(--muted)}
+.post-meta .cta{font-size:12px;font-weight:700;color:var(--magenta)}
+
+/* ===== Brand ===== */
+.brand-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.brand-card{border-radius:18px;background:#fff;padding:30px 28px;box-shadow:0 16px 38px rgba(124,40,82,.1)}
+.brand-card h3{font-size:20px;margin-bottom:18px}
+.swatches{display:flex;flex-wrap:wrap;gap:12px}
+.sw{flex:1;min-width:120px;border-radius:12px;overflow:hidden;border:1px solid rgba(124,40,82,.12)}
+.sw .fill{height:64px}
+.sw .name{padding:8px 10px;font-size:11.5px;font-weight:600;color:var(--muted)}
+.sw .name b{display:block;color:var(--ink);font-size:12px}
+.font-row{display:grid;gap:10px}
+.font-row .f{display:flex;align-items:baseline;gap:14px}
+.font-row .f .sample{font-size:26px;font-weight:800;color:var(--ink)}
+.font-row .f .w{font-size:11.5px;color:var(--muted);font-weight:600;min-width:96px}
+.shape-row{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.shape{width:92px;height:92px}
+.shape.mag{background:var(--magenta)}
+.shape.aub{background:var(--aubergine)}
+.shape.pink{background:var(--pink);border:1px solid rgba(124,40,82,.15)}
+.shape.lilac{background:var(--lilac);border:1px solid rgba(124,40,82,.15)}
+.shape-label{font-size:11.5px;color:var(--muted);font-weight:600;margin-top:8px}
+
+/* ===== Process ===== */
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:step}
+.step{border-radius:16px;background:#fff;padding:26px 22px;position:relative;box-shadow:0 14px 32px rgba(124,40,82,.1)}
+.step::before{counter-increment:step;content:"0" counter(step);font-family:var(--serif);font-size:15px;font-weight:800;color:var(--magenta)}
+.step h3{font-size:16px;margin:12px 0 6px}
+.step p{font-size:12.5px;color:var(--muted)}
+
+/* ===== Contact ===== */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.contact-copy p{color:var(--muted);font-size:15px;margin-top:14px;max-width:46ch}
+.contact-list{margin-top:28px;list-style:none;display:grid;gap:14px}
+.contact-list li{display:flex;gap:14px;align-items:flex-start;font-size:14px;color:var(--muted)}
+.contact-list svg{width:18px;height:18px;stroke:var(--magenta);flex-shrink:0;margin-top:2px}
+.contact-list b{color:var(--aubergine);font-weight:700}
+form{display:grid;gap:16px}
+.field label{display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:7px}
+.field input,.field textarea{width:100%;background:#fff;border:1px solid rgba(124,40,82,.2);border-radius:10px;color:var(--ink);padding:13px 15px;font:inherit;font-size:14px;outline:none;transition:border-color .25s,box-shadow .25s}
+.field input:focus,.field textarea:focus{border-color:var(--magenta);box-shadow:0 0 0 4px rgba(220,5,79,.1)}
+.field textarea{resize:vertical;min-height:110px}
+.form-note{font-size:12px;color:var(--muted)}
+.toast{position:fixed;left:50%;bottom:34px;transform:translateX(-50%) translateY(80px);background:var(--aubergine);border:1px solid var(--magenta);color:#fff;padding:14px 22px;border-radius:12px;font-size:14px;z-index:99;opacity:0;transition:all .4s}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* ===== Footer ===== */
+footer{border-top:1px solid rgba(124,40,82,.16);padding:46px 0 34px;background:#FDEDED}
+.foot{display:flex;flex-wrap:wrap;gap:22px;align-items:center;justify-content:space-between}
+.foot .demo{font-size:12px;color:var(--muted);max-width:56ch}
+.foot-copy{margin-top:26px;font-size:12px;color:var(--muted);display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
+.foot-copy .maker{color:var(--aubergine);font-weight:600}
+
+/* ===== Reveal ===== */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ===== Responsive ===== */
+@media (max-width:980px){
+  .hero-grid{grid-template-columns:1fr;gap:40px;padding:64px 0 60px}
+  .hero-tag{left:14px;bottom:-14px}
+  .banner-grid,.brand-grid{grid-template-columns:1fr}
+  .social-grid{grid-template-columns:repeat(2,1fr)}
+  .process{grid-template-columns:repeat(2,1fr)}
+  .contact-grid{grid-template-columns:1fr;gap:40px}
+}
+@media (max-width:760px){
+  .nav-links{position:fixed;inset:0;top:70px;background:var(--cream);flex-direction:column;gap:6px;padding:28px 24px;transform:translateX(100%);transition:transform .35s ease;z-index:49}
+  .nav-links.open{transform:none}
+  .nav-links a{padding:14px 0;font-size:16px;width:100%;border-bottom:1px solid rgba(124,40,82,.14)}
+  .nav-links .btn{margin-top:16px}
+  .menu-btn{display:inline-flex}
+  .social-grid{grid-template-columns:1fr}
+  .process{grid-template-columns:1fr}
+  section{padding:66px 0}
+  .b728{height:auto;flex-direction:column;align-items:flex-start;padding:0}
+  .b728 .bbg{position:absolute;inset:0}
+  .b728 .bimg{position:relative;width:100%;height:150px}
+  .b728 .btext{padding:16px 18px}
+}
+@media (max-width:480px){
+  .hero h1{font-size:34px}
+  .banner-stage{padding:26px 12px}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== Header ===== -->
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Cookinglife home">
+      <span class="logo-chip logo-cut">cookinglife</span>
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#banners">Banners</a></li>
+        <li><a href="#social">Social</a></li>
+        <li><a href="#brand">Brand</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a class="btn btn-magenta" href="#contact">Start a project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+      </ul>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- ===== Hero ===== -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-copy reveal">
+      <span class="eyebrow">Design proposal · Concept demonstration</span>
+      <h1>Banners & social content that taste <em>as good as they look.</em></h1>
+      <p class="hero-sub">A design proposal for Cookinglife: multilingual web banners and social media posts built on the Cookinglife brand guide — CL Magenta, Poppins typography and the signature cut-corner shapes, ready in NL, DE, FR and EN.</p>
+      <div class="hero-cta">
+        <a class="btn btn-magenta" href="#banners">See the banners <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost" href="#social">Social posts</a>
+      </div>
+      <div class="payoff">Alles<br>voor<br>jouw<br>smaak.<small>van koken tot tafelen</small></div>
+      <div class="hero-proof">
+        <span class="proof"><b>4 languages</b> · NL DE FR EN</span>
+        <span class="proof"><b>Brand-guide</b> exact colours & shapes</span>
+        <span class="proof"><b>All formats</b> 250×250 · 728×90 · 120×600</span>
+      </div>
+    </div>
+    <div class="hero-media reveal">
+      <div class="frame"><img src="assets/lifestyle-cooking.webp" alt="Warm natural-light kitchen scene with ceramics and tableware"></div>
+      <div class="hero-tag"><b>cookinglife</b>Alles voor jouw smaak.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Banners ===== -->
+<section id="banners">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">01 · Web banners</span>
+      <h2>Multilingual banners, following your stramien</h2>
+      <p>Sample executions in the standard banner sizes from the brand guide (250×250, 728×90, 120×600), rendered in the Cookinglife grid, cut-corner shapes and CL Magenta. All products and prices below are illustrative demo content.</p>
+      <div class="lang-chips"><span class="lang-chip">NL</span><span class="lang-chip">DE</span><span class="lang-chip">FR</span><span class="lang-chip">EN</span></div>
+    </div>
+
+    <div class="banner-grid">
+      <!-- 250x250 NL -->
+      <div class="banner-card reveal">
+        <div class="banner-stage">
+          <div class="b250">
+            <div class="bimg"><img src="assets/product-bowl.webp" alt="White ceramic soup bowl with thyme"></div>
+            <div class="bgrad"></div>
+            <div class="btop"><span class="merk">Trendy & Cosy</span><span class="prod">Baltic Vanilla kom</span></div>
+            <div class="bprice"><span class="was">€12,99</span><span class="lbl">nu voor</span><span class="now">8,99</span></div>
+            <div class="blogo"><span>cookinglife</span></div>
+          </div>
+        </div>
+        <div class="banner-note"><b>250 × 250 · NL</b><span class="dim">Demo price & product</span></div>
+      </div>
+
+      <!-- 250x250 EN -->
+      <div class="banner-card reveal">
+        <div class="banner-stage">
+          <div class="b250">
+            <div class="bimg"><img src="assets/product-tableware.webp" alt="White plate, pink mug and gold fork on linen"></div>
+            <div class="bgrad"></div>
+            <div class="btop"><span class="merk">Trendy & Cosy</span><span class="prod">Baltic Vanilla bowl</span></div>
+            <div class="bprice"><span class="was">€12,99</span><span class="lbl">now for</span><span class="now">8,99</span></div>
+            <div class="blogo"><span>cookinglife</span></div>
+          </div>
+        </div>
+        <div class="banner-note"><b>250 × 250 · EN</b><span class="dim">Demo price & product</span></div>
+      </div>
+
+      <!-- 728x90 NL -->
+      <div class="banner-card reveal">
+        <div class="banner-stage">
+          <div class="b728">
+            <div class="bbg"></div>
+            <div class="btext"><span class="merk">Trendy & Cosy</span><span class="prod">Baltic Vanilla kom</span><div class="price"><span class="was">€12,99</span><span class="lbl">nu voor</span><span class="now">8,99</span></div></div>
+            <div class="bimg"><img src="assets/product-bowl.webp" alt="Ceramic bowl banner"></div>
+            <div class="blogo">cookinglife</div>
+          </div>
+        </div>
+        <div class="banner-note"><b>728 × 90 · NL</b><span class="dim">Demo price & product</span></div>
+      </div>
+
+      <!-- 728x90 DE + pay-off -->
+      <div class="banner-card reveal">
+        <div class="banner-stage">
+          <div class="b728" style="background:#7C2852">
+            <div class="btext"><span class="merk" style="opacity:.85">Pay-off</span><span class="prod">Alles für deinen Geschmack.</span><div class="price"><span class="lbl">vom Kochen bis zum Tafeln</span></div></div>
+            <div class="blogo">cookinglife</div>
+          </div>
+        </div>
+        <div class="banner-note"><b>728 × 90 · DE</b><span class="dim">Pay-off execution</span></div>
+      </div>
+
+      <!-- 120x600 NL -->
+      <div class="banner-card reveal" style="grid-column:1 / -1">
+        <div class="banner-stage" style="padding:30px 10px">
+          <div class="b120">
+            <div class="bimg"><img src="assets/gathering.webp" alt="Warm dinner table with friends"></div>
+            <div class="bgrad"></div>
+            <div class="btext"><span class="merk">Trendy & Cosy</span><span class="prod">Baltic Vanilla kom</span><span class="was">€12,99</span><span class="lbl">nu voor</span><span class="now">8,99</span></div>
+            <div class="blogo">cookinglife</div>
+          </div>
+        </div>
+        <div class="banner-note"><b>120 × 600 · NL</b><span class="dim">Skyscraper demo</span></div>
+      </div>
+    </div>
+
+    <div class="banner-payoff reveal">
+      <div><div class="p1">Alles<br>voor<br>jouw<br>smaak.</div><div class="p2">van koken tot tafelen</div></div>
+      <div class="tags"><span>NL · Alles voor jouw smaak.</span><span>DE · Alles für deinen Geschmack.</span><span>FR · Tout pour votre goût.</span><span>EN · Everything for your taste.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Social ===== -->
+<section class="alt" id="social">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">02 · Social media</span>
+      <h2>Posts your audience will stop scrolling for</h2>
+      <p>Square social executions in the Cookinglife lifestyle-photography style: natural light, warm tones, real moments. Sample captions and CTAs — all demo content.</p>
+    </div>
+    <div class="social-grid">
+      <div class="post reveal">
+        <div class="post-img"><img src="assets/gathering.webp" alt="Friends toasting at a warm dinner table"><div class="post-copy"><b>Alles voor jouw smaak.</b><span>van koken tot tafelen · cookinglife</span></div></div>
+        <div class="post-meta"><span class="dim">Demo post · NL</span><span class="cta">Shop nu →</span></div>
+      </div>
+      <div class="post reveal">
+        <div class="post-img"><img src="assets/product-bowl.webp" alt="White ceramic bowl close-up"><div class="post-copy"><b>Baltic Vanilla — nieuw in de collectie</b><span>Zacht, tijdloos, voor elke tafel.</span></div></div>
+        <div class="post-meta"><span class="dim">Demo post · NL</span><span class="cta">Bekijk →</span></div>
+      </div>
+      <div class="post reveal">
+        <div class="post-img"><img src="assets/product-tableware.webp" alt="Tableware set on linen"><div class="post-copy"><b>Set the table, set the mood</b><span>Everything for your taste — new season.</span></div></div>
+        <div class="post-meta"><span class="dim">Demo post · EN</span><span class="cta">Shop now →</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Brand ===== -->
+<section id="brand">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">03 · Brand consistency</span>
+      <h2>Built exactly on your brand guide</h2>
+      <p>Every banner and post follows the Cookinglife huisstijl: the CL colour palette, Poppins typography and the cut-corner graphic language.</p>
+    </div>
+    <div class="brand-grid">
+      <div class="brand-card reveal">
+        <h3>Colour palette</h3>
+        <div class="swatches">
+          <div class="sw"><div class="fill" style="background:#DC054F"></div><div class="name"><b>CL Magenta</b>#DC054F</div></div>
+          <div class="sw"><div class="fill" style="background:#7C2852"></div><div class="name"><b>CL Aubergine</b>#7C2852</div></div>
+          <div class="sw"><div class="fill" style="background:#3C4F5C"></div><div class="name"><b>CL Donkerblauw</b>#3C4F5C</div></div>
+          <div class="sw"><div class="fill" style="background:#F8C8C8"></div><div class="name"><b>CL Roze</b>#F8C8C8</div></div>
+        </div>
+      </div>
+      <div class="brand-card reveal">
+        <h3>Typography — Poppins</h3>
+        <div class="font-row">
+          <div class="f"><span class="sample" style="font-weight:800">Aa</span><span class="w">Extrabold · headlines</span></div>
+          <div class="f"><span class="sample" style="font-weight:700">Aa</span><span class="w">Bold · intros & accents</span></div>
+          <div class="f"><span class="sample" style="font-weight:500">Aa</span><span class="w">Medium · labels</span></div>
+          <div class="f"><span class="sample" style="font-weight:400">Aa</span><span class="w">Regular · body text</span></div>
+        </div>
+      </div>
+      <div class="brand-card reveal">
+        <h3>Graphic language</h3>
+        <div class="shape-row">
+          <div><div class="shape cut-tr mag"></div><div class="shape-label">Cut-corner · Magenta</div></div>
+          <div><div class="shape cut aub"></div><div class="shape-label">Cut-corner · Aubergine</div></div>
+          <div><div class="shape cut pink"></div><div class="shape-label">Soft pink field</div></div>
+          <div><div class="shape cut lilac"></div><div class="shape-label">Lilac field</div></div>
+        </div>
+      </div>
+      <div class="brand-card reveal">
+        <h3>Logo & pay-off usage</h3>
+        <p style="font-size:13.5px;color:var(--muted);margin-bottom:16px">The logo is used in CL Magenta or white, with the logo bar for contrast on photography, and the pay-off in four lines ending with a full stop.</p>
+        <div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap">
+          <span style="background:var(--magenta);color:#fff;font-size:15px;font-weight:800;padding:6px 14px;border-radius:4px">cookinglife</span>
+          <span style="background:#fff;color:var(--magenta);border:2px solid var(--magenta);font-size:15px;font-weight:800;padding:5px 12px;border-radius:4px">cookinglife</span>
+          <div style="font-family:var(--serif);font-weight:800;color:var(--magenta);font-size:16px;line-height:1.15">Alles<br>voor<br>jouw<br>smaak.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Process ===== -->
+<section class="alt" id="process">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">04 · How we work</span>
+      <h2>From brand guide to ready-to-use assets</h2>
+    </div>
+    <div class="process">
+      <div class="step reveal"><h3>Brief & brand review</h3><p>We study your brand guide and the campaign goal for each language.</p></div>
+      <div class="step reveal"><h3>Design in your stramien</h3><p>Banners and posts are built on the Cookinglife grid and cut-corner shapes.</p></div>
+      <div class="step reveal"><h3>Localised for NL · DE · FR · EN</h3><p>Copy is adapted in tone-of-voice — personal, active, to-the-point — per market.</p></div>
+      <div class="step reveal"><h3>Deliver all formats</h3><p>Final files in every banner size plus social crops, ready for your CMS.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Contact ===== -->
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">05 · Let's talk</span>
+      <h2>Start your banner & social project</h2>
+      <p>This page is a concept demonstration. Fill in the form to request a quote — no real order is placed.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-copy reveal">
+        <p>We design banners and social content for Cookinglife in all languages, always consistent with the brand guide. Tell us which formats and markets you need, and we will send a proposal.</p>
+        <ul class="contact-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg><span><b>Formats</b><br>250×250 · 728×90 · 120×600 · social posts</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9c2.5 0 4 1.5 4 1.5"/><path d="M12 7v5l3 2"/></svg><span><b>Languages</b><br>NL · DE · FR · EN</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span><b>Contact</b><br>hello@placeholder.example (demo)</span></li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <form id="contactForm" novalidate>
+          <div class="field"><label for="name">Full name</label><input id="name" type="text" placeholder="Your name" required></div>
+          <div class="field"><label for="email">Email address</label><input id="email" type="email" placeholder="you@company.com" required></div>
+          <div class="field"><label for="msg">What do you need?</label><textarea id="msg" placeholder="e.g. 728×90 banners in NL, DE, FR and EN for the autumn campaign…" required></textarea></div>
+          <button class="btn btn-magenta" type="submit">Send request <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          <p class="form-note">Demo form — no real message is sent. Contact details shown are placeholders.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <span style="font-family:var(--serif);font-weight:800;font-size:16px;color:var(--ink)">cookinglife</span>
+      <p class="demo">Concept demonstration for proposal purposes. Not an official Cookinglife website, not affiliated with Cookinglife, and no real payment or orders are processed.</p>
+    </div>
+    <div class="foot-copy">
+      <span>© 2026 Concept demo · Built from the Cookinglife brand guide 1.0</span>
+      <span class="maker">Website by TablePilot Studio</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// Mobile menu
+var menuBtn = document.getElementById('menuBtn');
+var navLinks = document.getElementById('navLinks');
+menuBtn.addEventListener('click', function(){
+  var open = navLinks.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+});
+navLinks.querySelectorAll('a').forEach(function(a){
+  a.addEventListener('click', function(){ navLinks.classList.remove('open'); });
+});
+
+// Reveal on scroll
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+  });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+// Demo form validation + toast
+var form = document.getElementById('contactForm');
+var toast = document.getElementById('toast');
+function showToast(msg){
+  toast.textContent = msg;
+  toast.classList.add('show');
+  setTimeout(function(){ toast.classList.remove('show'); }, 3200);
+}
+form.addEventListener('submit', function(e){
+  e.preventDefault();
+  var name = document.getElementById('name').value.trim();
+  var email = document.getElementById('email').value.trim();
+  var msg = document.getElementById('msg').value.trim();
+  if(!name){ showToast('Please enter your name.'); return; }
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ showToast('Please enter a valid email address.'); return; }
+  if(!msg){ showToast('Please tell us what you need.'); return; }
+  showToast('Thanks, ' + name + ' — demo request received. (No real message is sent.)');
+  form.reset();
+});
+</script>
+</body>
+</html>
